@@ -53,6 +53,19 @@ Users should be able to:
 
 So many cool 😎 things:
 
+- CSS Grid Base Layout - I am both still intrigued by but also super frustrated by a CSS grid base layout. I think the main concern I have is that when trying to implement a full width background but have the inner content be contained in the regular content area. I haven't found Kevin Powell's solution that great because it very much limits the kind of `display` value I can use for the inner section. So I still have to work through this and how I can make it a general utility that works practically in common design layouts.
+  - [Layout Breakouts with CSS Grid](https://ryanmulligan.dev/blog/layout-breakouts/)
+  - [A new approach to container and wrapper classes](https://youtu.be/c13gpBrnGEw?si=8mu38I0Mg0vXNgBC)
+- Flow CSS Utility
+  - In a similar way as the CSS Grid Base Layout, I really love the idea of a general flow/stack utility class, but find it hard to implement in practice. My main issue with this utility is when I have a `visually-hidden` div inside the flow container, it seems like the flow class continues to add a margin for that hidden element even though it shouldn't. So that's a bit frustrating and not sure how to fix it yet.
+  - [Flow CSS Utility](https://piccalil.li/blog/flow-utility/)
+  - [Every Layout - The Stack](https://every-layout.dev/layouts/stack/)
+  - [CSS lobotomized owl selector: A modern guide](https://blog.logrocket.com/css-lobotomized-owl-selector-modern-guide/)
+  - [Axiomatic CSS and Lobotomized Owls](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/)
+- Text on images - I have so much still to learn about using gradients generally, but I really love how putting a little darkness overlay on an image helps to make the text on top stand out and be readable. I want to get to the point where this is a regular part of my repertoire/tookit that I use often and easily implement.
+  - [Using CSS gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) -
+  - [Design Considerations: Text on Images](https://css-tricks.com/design-considerations-text-images/) - which cites [7 Rules for Creating Gorgeous UI — Part 2](https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-2-430de537ba96)
+- [Using relative colors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors/Relative_colors) - I love using relative colors to apply an opacity to a color. But unfortunately, it seems like [relative colors are just not that well supported](https://caniuse.com/css-relative-colors) at the moment. And so for now, I will stay away from using this approach.
 - [grid-auto-flow](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow)
 - [Using CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
 - [:nth-child()](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child) and [:nth-last-child()](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-last-child)
@@ -82,7 +95,10 @@ So many cool 😎 things:
 
 Specific areas that the solution should be improved (known issues):
 
-- Turn the header into some sort of sticky header that stays around as the user scrolls down the page (at least in the mobile view)
+- Turn the header into some sort of sticky header that stays around as the user scrolls down the page (at least in the mobile view). Seems a little tricky because the header includes both the top part (the logo and primary nav), which is what I want to be sticky, and the hero content, which should not be sticky. But both parts share the same background image. Might also want the top part to transition from the background image to an all black background as the user scrolls up and the background image is scrolled out the viewport. So how do all that? Will have to think about it a bit more and come back to it.
+  - [`position: sticky`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky)
+  - [Sticky Headers And Full-Height Elements: A Tricky Combination](https://www.smashingmagazine.com/2024/09/sticky-headers-full-height-elements-tricky-combination/)
+  - [Google "change header background color on scroll css"](https://www.google.com/search?q=change+header+background+color+on+scroll+css)
 
 More general ideas I want to consider:
 
