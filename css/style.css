@@ -1,3 +1,5 @@
+/* ----- STYLE ----- */
+/* ----- CONFIG ----- */
 /* ----- VARIABLES ----- */
 /* ----- BREAKPOINTS ----- */
 /* 650px -> mobile menu + flex column to row */
@@ -17,6 +19,7 @@
   --fs-400: 0.9375rem; /* 15px */
 }
 
+/* ----- END ----- */
 /* ----- RESET ----- */
 /* Box sizing rules */
 *,
@@ -120,7 +123,7 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-/* ----- CUBE CSS - https://cube.fyi/ ----- */
+/* ----- END ----- */
 /* ----- GLOBAL STYLES ----- */
 body {
   background-color: var(--clr-white);
@@ -148,6 +151,7 @@ h2 {
   line-height: 1;
 }
 
+/* ----- END ----- */
 /* ----- COMPOSITION ----- */
 .content-grid {
   min-width: 320px;
@@ -218,27 +222,7 @@ h2 {
     justify-content: space-between;
   }
 }
-.hover-links-list a {
-  display: block;
-  text-decoration: none;
-  position: relative;
-}
-.hover-links-list a:hover::before, .hover-links-list a:focus-visible::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 24px;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 2px;
-  background-color: var(--clr-white);
-}
-.hover-links-list a:focus-visible {
-  outline: 2px dashed var(--clr-white);
-  outline-offset: 4px;
-}
-
+/* ----- END ----- */
 /* ----- UTILITIES ----- */
 .font-base {
   font-family: var(--ff-body);
@@ -324,6 +308,28 @@ h2 {
   opacity: 0.5;
 }
 
+.hover-links-list a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.hover-links-list a:hover::before, .hover-links-list a:focus-visible::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: var(--clr-white);
+}
+.hover-links-list a:focus-visible {
+  outline: 2px dashed var(--clr-white);
+  outline-offset: 4px;
+}
+
+/* ----- END ----- */
 /* ----- BLOCKS ----- */
 .body {
   --flow-space: 6rem; /* 96px */
@@ -607,5 +613,7 @@ h2 {
     justify-self: end;
   }
 }
+/* ----- END ----- */
 /* ----- EXCEPTIONS ----- */
+/* ----- END ----- */
 /* ----- END ----- */

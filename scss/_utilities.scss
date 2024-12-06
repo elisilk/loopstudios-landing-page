@@ -1,0 +1,122 @@
+/* ----- UTILITIES ----- */
+
+.font-base {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+}
+
+.text-15 {
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.666667; /* 25px */
+  color: hsl(from var(--clr-black) h s l / 49.94%);
+}
+
+.color-inverted {
+  color: var(--clr-white);
+  background-color: var(--clr-black);
+}
+
+.padding-block-24 {
+  padding-block: 1.5rem;
+}
+
+.padding-block-44 {
+  padding-block: 2.75rem;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.text-align-center-to-start {
+  text-align: center;
+}
+
+@media screen and (width > 650px) {
+  .text-align-center-to-start {
+    text-align: start;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 1px solid var(--clr-black);
+  padding: 0.75rem 2.25rem;
+
+  color: var(--clr-black);
+  cursor: pointer;
+
+  font-size: 0.875rem; /* 14px */
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 5px;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--clr-white);
+    background-color: var(--clr-black);
+  }
+
+  &:focus-visible {
+    outline: 2px dashed var(--clr-black);
+    outline-offset: 2px;
+  }
+}
+
+.button--inverted {
+  border: 1px solid var(--clr-white);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--clr-black);
+    background-color: var(--clr-white);
+  }
+
+  &:focus-visible {
+    outline: 2px dashed var(--clr-white);
+  }
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.hover-links-list {
+  a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+
+    &:hover::before,
+    &:focus-visible::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 24px;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      background-color: var(--clr-white);
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--clr-white);
+      outline-offset: 4px;
+    }
+  }
+}
+
+/* ----- END ----- */
