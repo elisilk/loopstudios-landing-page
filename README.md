@@ -26,11 +26,9 @@ Users should be able to:
 
 ### Screenshots
 
-|               Mobile designed at 375px:               | Desktop designed at 1440px:                            |
-| :---------------------------------------------------: | ------------------------------------------------------ |
-|       ![](./screenshots/screenshot-mobile.png)        | ![](./screenshots/screenshot-desktop.png)              |
-|                Mobile (hover states):                 | Desktop (hover states):                                |
-| ![](./screenshots/screenshot-mobile-hover-states.png) | ![](./screenshots/screenshot-desktop-hover-states.png) |
+|        Mobile designed at 375px:         | Desktop designed at 1440px:               |
+| :--------------------------------------: | ----------------------------------------- |
+| ![](./screenshots/screenshot-mobile.png) | ![](./screenshots/screenshot-desktop.png) |
 
 ### Links
 
@@ -83,8 +81,6 @@ So many cool 😎 things:
 Specific areas that the solution should be improved (known issues):
 
 - Turn the header into some sort of sticky header that stays around as the user scrolls down the page (at least in the mobile view)
-- Make sure the design works down to 320px viewport width
-  - "experiences" in the h1 title goes beyond the containing box
 
 More general ideas I want to consider:
 
