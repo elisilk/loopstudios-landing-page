@@ -240,6 +240,10 @@ h2 {
   background-color: var(--clr-black);
 }
 
+.opacity-50 {
+  opacity: 0.5;
+}
+
 .padding-block-24 {
   padding-block: 1.5rem;
 }
@@ -302,10 +306,6 @@ h2 {
 }
 .button--inverted:focus-visible {
   outline: 2px dashed var(--clr-white);
-}
-
-.opacity-50 {
-  opacity: 0.5;
 }
 
 .hover-links-list a {

@@ -53,6 +53,8 @@ Users should be able to:
 
 So many cool 😎 things:
 
+- [Sass](https://sass-lang.com/) - This was my first time really using Sass, a CSS preprocessor as part of Frontend Mentor's [Advanced CSS techniques](https://www.frontendmentor.io/learning-paths/advanced-css-techniques-vdOtKjIC4V). I feel like I just barely scratched the surface of this, but it was good to get the setup working and starting to get the feel of it. I used partials and a few variables. I will want to do more with nesting, mixins, and functions as a continue to make use of Sass and learn all it has to offer.
+  - [Sass Crash Course](https://youtu.be/nu5mdN2JIwM?si=GWKL5R2W1x_aYY2I)
 - CSS Grid Base Layout - I am both still intrigued by but also super frustrated by a CSS grid base layout. I think the main concern I have is that when trying to implement a full width background but have the inner content be contained in the regular content area. I haven't found Kevin Powell's solution that great because it very much limits the kind of `display` value I can use for the inner section. So I still have to work through this and how I can make it a general utility that works practically in common design layouts.
   - [Layout Breakouts with CSS Grid](https://ryanmulligan.dev/blog/layout-breakouts/)
   - [A new approach to container and wrapper classes](https://youtu.be/c13gpBrnGEw?si=8mu38I0Mg0vXNgBC)
