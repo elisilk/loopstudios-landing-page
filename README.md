@@ -55,6 +55,10 @@ So many cool 😎 things:
 
 - [Sass](https://sass-lang.com/) - This was my first time really using Sass, a CSS preprocessor as part of Frontend Mentor's [Advanced CSS techniques](https://www.frontendmentor.io/learning-paths/advanced-css-techniques-vdOtKjIC4V). I feel like I just barely scratched the surface of this, but it was good to get the setup working and starting to get the feel of it. I used partials and a few variables. I will want to do more with nesting, mixins, and functions as a continue to make use of Sass and learn all it has to offer.
   - [Sass Crash Course](https://youtu.be/nu5mdN2JIwM?si=GWKL5R2W1x_aYY2I)
+  - [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
+    - [vscode-live-sass-compiler settings](https://github.com/ritwickdey/vscode-live-sass-compiler/blob/master/docs/settings.md)
+  - [Breaking Change: CSS Variable Syntax](https://sass-lang.com/documentation/breaking-changes/css-vars/)
+  - [Sass and BEM for beginners](https://youtu.be/jfMHA8SqUL4?si=5eCoq7d0kS4Mr2BR)
 - CSS Grid Base Layout - I am both still intrigued by but also super frustrated by a CSS grid base layout. I think the main concern I have is that when trying to implement a full width background but have the inner content be contained in the regular content area. I haven't found Kevin Powell's solution that great because it very much limits the kind of `display` value I can use for the inner section. So I still have to work through this and how I can make it a general utility that works practically in common design layouts.
   - [Layout Breakouts with CSS Grid](https://ryanmulligan.dev/blog/layout-breakouts/)
   - [A new approach to container and wrapper classes](https://youtu.be/c13gpBrnGEw?si=8mu38I0Mg0vXNgBC)
@@ -67,6 +71,13 @@ So many cool 😎 things:
 - Text on images - I have so much still to learn about using gradients generally, but I really love how putting a little darkness overlay on an image helps to make the text on top stand out and be readable. I want to get to the point where this is a regular part of my repertoire/tookit that I use often and easily implement.
   - [Using CSS gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) -
   - [Design Considerations: Text on Images](https://css-tricks.com/design-considerations-text-images/) - which cites [7 Rules for Creating Gorgeous UI — Part 2](https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-2-430de537ba96)
+- [Responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [Responsive Images Done Right: A Guide To `picture` And `srcset`](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/)
+- Accessibility - Still learning so much about accessibility and I admit it's hard to remember it all and get proficient in figuring out what's are the best practices. So hopefully with more practice, more of it will become second nature.
+  - [WAI Menus Tutorial](https://www.w3.org/WAI/tutorials/menus/)
+  - [Practical Guide on Implementing ‘aria-expanded’ in Web Development](https://www.a11y-collective.com/blog/aria-expanded/)
+  - [ARIA in CSS](https://css-tricks.com/aria-in-css/)
+  - [Small Tweaks That Can Make a Huge Impact on Your Website’s Accessibility](https://css-tricks.com/small-tweaks-can-make-huge-impact-websites-accessibility/)
 - [Using relative colors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors/Relative_colors) - I love using relative colors to apply an opacity to a color. But unfortunately, it seems like [relative colors are just not that well supported](https://caniuse.com/css-relative-colors) at the moment. And so for now, I will stay away from using this approach.
 - [grid-auto-flow](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow)
 - [Using CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
