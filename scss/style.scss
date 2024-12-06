@@ -138,6 +138,11 @@ textarea:not([rows]) {
 
 /* ----- GLOBAL STYLES ----- */
 
+body {
+  background-color: var(--clr-white);
+  font-family: var(--ff-body);
+}
+
 h1,
 h2,
 h3,
@@ -672,7 +677,8 @@ h2 {
         }
 
         &::before {
-          background: hsl(from var(--clr-white) h s l / 75.07%);
+          background: rgb(255 255 255 / 75.07%);
+          /* background: hsl(from var(--clr-white) h s l / 75.07%); */
         }
       }
 

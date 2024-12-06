@@ -47,14 +47,16 @@ Users should be able to:
 - Fluid typography and spacing
 - Accessibility
 - CUBE CSS
-- SASS
+- Sass
 
 ### What I learned
 
 So many cool 😎 things:
 
-- []()
-- []()
+- [grid-auto-flow](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow)
+- [Using CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
+- [:nth-child()](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child) and [:nth-last-child()](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-last-child)
+  - [How can I target a specific column or row in a CSS grid layout?](https://stackoverflow.com/questions/46308048/how-can-i-target-a-specific-column-or-row-in-a-css-grid-layout)
 - Fluid typography
   - [An accessible fluid type generator](https://fluid.style/type?min=2.25&max=4.5&min-bp=20&max-bp=77.5&unit=%22rem%22)
   - [Responsive Type and Zoom](https://adrianroselli.com/2019/12/responsive-type-and-zoom.html)
