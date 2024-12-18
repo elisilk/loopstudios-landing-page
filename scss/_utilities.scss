@@ -8,7 +8,10 @@
 .text-15 {
   font-size: 0.9375rem; /* 15px */
   line-height: 1.666667; /* 25px */
-  color: hsl(from var(--clr-black) h s l / 49.94%);
+  /* color: hsl(from var(--clr-black) h s l / 49.94%); */
+  color: hsl(
+    from var(--clr-black) h s l / 59.94%
+  ); /* increased contrast between foreground abnd background colors for accessibility */
 }
 
 .color-inverted {

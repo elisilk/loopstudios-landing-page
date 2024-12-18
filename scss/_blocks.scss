@@ -9,6 +9,11 @@
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     no-repeat url("../images/mobile/image-hero.jpg") top / cover;
 
+  @supports (background-image: url("../images/mobile/image-hero.jpg")) {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      no-repeat url("../images/mobile/image-hero.webp") top / cover;
+  }
+
   padding-block: clamp(2.5rem, 1rem + 6vw, 4rem); /* (m) 40px -> (d) 64px */
 
   height: 650px;
@@ -19,6 +24,11 @@
   .header {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       no-repeat url("../images/desktop/image-hero.jpg") top / cover;
+
+    @supports (background-image: url("../images/desktop/image-hero.jpg")) {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        no-repeat url("../images/desktop/image-hero.webp") top / cover;
+    }
   }
 }
 

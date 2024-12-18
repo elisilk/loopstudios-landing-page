@@ -53,6 +53,47 @@ Users should be able to:
 
 So many cool 😎 things:
 
+- Lighthouse and PageSpeed Insights
+
+  - [Thanks to @NikitaVologdin for the feedback and links to resources](https://www.frontendmentor.io/solutions/responsive-landing-page-using-sass-8inSDo6cyY), I spent some time improving the solution by working toward a [perfect Lighthouse score](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring) on each of the 4 metrics. I didn't get to perfection, but definitely improved.
+  - Comparing solutions
+    - Current solution - [PageSpeed Insights Report from Dec 16, 2024, 10:47:26 AM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-loopstudios-landing-page/59zwyw454b)
+    - Previous solution - [PageSpeed Insights Report from Dec 16, 2024, 10:47:26 AM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-loopstudios-landing-page/59zwyw454b)
+  - The main areas I improved included serving images in modern formats and eliminating render-blocking resources. I list resources for each below.
+  - [Serve images in modern formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)
+    - Largely followed this article on how to [Use WebP images](https://web.dev/articles/serve-images-webp)
+    - Installed [`webp` precompilied utilities](https://developers.google.com/speed/webp/docs/precompiled) using [homebrew on Mac OS](https://formulae.brew.sh/formula/webp).
+      - I chose not to use [ImageMagick](https://imagemagick.org/) at this time, but may explore it more in the future.
+    - After running the utlity on all of the JPEG files in the design, the file size for most images was cut about in half or close to it (e.g., 28KB down to 15KB).
+    - I made sure to include JPEG fallbacks for each of the webp images, both the images inline and the background images
+      - [MDN Responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+      - [Responsive Images 101, Part 7: Type](https://cloudfour.com/thinks/responsive-images-101-part-7-type/)
+      - [Responsive Images in Practice](https://alistapart.com/article/responsive-images-in-practice/)
+      - [CSS Fallbacks for WebP background images with @supports](https://www.js-craft.io/blog/css-fallbacks-for-webp-background-images-with-supports)
+  - [Eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources)
+
+    - [web.dev Learn Performance](https://web.dev/learn/performance) and [Performance](https://web.dev/performance)
+    - [11 best practices to eliminate render-blocking resources](https://blog.logrocket.com/11-best-practices-eliminate-render-blocking-resources/)
+    - [Optimize web fonts](https://web.dev/learn/performance/optimize-web-fonts)
+    - [transfonter](https://transfonter.org/) - Thank you to [@NikitaVologdin](https://www.frontendmentor.io/profile/NikitaVologdin), I used this resource to convert the ttf files downloaded from Google Fonts into the more compressed woff2 format. In the case of this design, Alata went from 348KB down to 101KB, and Josefin Sans went from 126KB down to 23KB. So that was significant savings.
+
+  - I made a couple of other changes based on the PageSpeed analysis.
+
+    - "Background and foreground colors do not have a sufficient contrast ratio" (under Accessibility) - This was a fairly easy change to darken the text color a little bit, even though it kind of goes against what is called for in the design.
+    - "Serves images with low resolution" (under Best Practices for the desktop version of the site) - This error seemed to be focused on the "image-interactive" in the leader section and seemed to be asking for an image option with 2x pixel density. I didn't have access to the original full-quality image and so I didn't have a way to get a true higher density version of the image. But to [practice resolution switching for display density](https://cloudfour.com/thinks/responsive-images-101-part-3-srcset-display-density/), I just created a larger version of the image (1048px x 717px) and used [`srcet`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source#srcset) to give the browser the option of which image to use. And that worked!
+
+  - Areas that I am still exploring, but was not successful at improving YET include:
+    - ["Enable text compression"](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression)
+    - ["Largest Contentful Paint element"](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint) (under Performance for the mobile version of the site) - This error seems to be about the header and hero section of the page. I tried to preload the image background image, but it didn't seem to help, and so I'm not sure exactly what to do next.
+      - [MDN `rel=preload`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload)
+      - [Can I use `preload`?](https://caniuse.com/?search=preload)
+      - [Preload responsive images](https://web.dev/articles/preload-responsive-images)
+      - [Optimize Largest Contentful Paint](https://web.dev/articles/optimize-lcp)
+      - [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp)
+      - [Optimize resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority)
+      - [Don't fight the browser preload scanner](https://web.dev/articles/preload-scanner)
+    - ["Page prevented back/forward cache restoration"](https://developer.chrome.com/docs/lighthouse/performance/bf-cache)
+
 - [Sass](https://sass-lang.com/) - This was my first time really using Sass, a CSS preprocessor as part of Frontend Mentor's [Advanced CSS techniques](https://www.frontendmentor.io/learning-paths/advanced-css-techniques-vdOtKjIC4V). I feel like I just barely scratched the surface of this, but it was good to get the setup working and starting to get the feel of it. I used partials and a few variables. I will want to do more with nesting, mixins, and functions as a continue to make use of Sass and learn all it has to offer.
   - [Sass Crash Course](https://youtu.be/nu5mdN2JIwM?si=GWKL5R2W1x_aYY2I)
   - [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)

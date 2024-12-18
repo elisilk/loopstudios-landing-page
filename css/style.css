@@ -1,5 +1,16 @@
 /* ----- STYLE ----- */
 /* ----- CONFIG ----- */
+/* ----- FONTS ----- */
+@font-face {
+  font-family: "Alata";
+  src: local("Alata Regular"), local("Alata-Regular"), url("../fonts/Alata-Regular.woff2") format("woff2"), url("../fonts/Alata-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans Thin"), local("JosefinSans-Thin"), url("../fonts/JosefinSans-Thin.woff2") format("woff2"), url("../fonts/JosefinSans-Thin.woff") format("woff");
+  font-display: swap;
+}
 /* ----- VARIABLES ----- */
 /* ----- BREAKPOINTS ----- */
 /* 650px -> mobile menu + flex column to row */
@@ -232,7 +243,8 @@ h2 {
 .text-15 {
   font-size: 0.9375rem; /* 15px */
   line-height: 1.666667; /* 25px */
-  color: hsl(from var(--clr-black) h s l/49.94%);
+  /* color: hsl(from var(--clr-black) h s l / 49.94%); */
+  color: hsl(from var(--clr-black) h s l/59.94%); /* increased contrast between foreground abnd background colors for accessibility */
 }
 
 .color-inverted {
@@ -342,10 +354,20 @@ h2 {
   height: 650px;
   align-items: start;
 }
+@supports (background-image: url("../images/mobile/image-hero.jpg")) {
+  .header {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), no-repeat url("../images/mobile/image-hero.webp") top/cover;
+  }
+}
 
 @media screen and (width > 550px) {
   .header {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), no-repeat url("../images/desktop/image-hero.jpg") top/cover;
+  }
+  @supports (background-image: url("../images/desktop/image-hero.jpg")) {
+    .header {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), no-repeat url("../images/desktop/image-hero.webp") top/cover;
+    }
   }
 }
 .skip-to-main {

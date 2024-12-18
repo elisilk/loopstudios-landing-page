@@ -2,6 +2,24 @@
 
 @use "sass:meta";
 
+/* ----- FONTS ----- */
+
+@font-face {
+  font-family: "Alata";
+  src: local("Alata Regular"), local("Alata-Regular"),
+    url("../fonts/Alata-Regular.woff2") format("woff2"),
+    url("../fonts/Alata-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans Thin"), local("JosefinSans-Thin"),
+    url("../fonts/JosefinSans-Thin.woff2") format("woff2"),
+    url("../fonts/JosefinSans-Thin.woff") format("woff");
+  font-display: swap;
+}
+
 /* ----- VARIABLES ----- */
 
 $font-family-body: "Alata", sans-serif;

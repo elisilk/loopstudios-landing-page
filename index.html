@@ -2,15 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+
+    <link rel="preload" href="fonts/Alata-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/JosefinSans-Thin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preload" href="images/mobile/image-hero.webp" as="image" type="image/webp" media="(max-width: 550px)">
+    <link rel="preload" href="images/desktop/image-hero.webp" as="image" type="image/webp" media="(min-width: 550.1px)">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Solution to Frontend Mentor's Loopstudios landing page design challenge.">
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <script defer src="./script.js"></script>
@@ -72,8 +75,10 @@
 
       <section class="[ section-leader ]" aria-labelledby="section-leader__title">
         <picture>
-          <source media="(min-width: 575px)" srcset="images/desktop/image-interactive.jpg"/>
-          <img src="images/mobile/image-interactive.jpg" alt="Man with VR headset on standing up and hands outstretched"/>
+          <source type="image/webp" media="(min-width: 575px)" srcset="images/desktop/image-interactive.webp, images/desktop/image-interactive-1048w.webp 2x"/>
+          <source type="image/jpeg" media="(min-width: 575px)" srcset="images/desktop/image-interactive.jpg, images/desktop/image-interactive-1048w.jpg 2x"/>
+          <source type="image/webp" srcset="images/mobile/image-interactive.webp"/>
+          <img src="images/mobile/image-interactive.jpg" alt="Man with VR headset on head while standing up with hands outstretched" id="image-interactive" class="[ responsive-img ]"/>
         </picture>
         <div class="[ section-leader__content ] [ text-align-center-to-start ]">
           <h2 id="section-leader__title">The leader in interactive VR</h2>
@@ -89,8 +94,10 @@
             <a href="#">
               <span>Deep earth</span>
               <picture>
-                <source media="(min-width: 575px)" srcset="images/desktop/image-deep-earth.jpg"/>
-                <img src="images/mobile/image-deep-earth.jpg" alt="Photo of Earth from space"/>
+                <source type="image/webp" media="(min-width: 575px)" srcset="images/desktop/image-deep-earth.webp"/>
+                <source type="image/jpeg" media="(min-width: 575px)" srcset="images/desktop/image-deep-earth.jpg"/>
+                <source type="image/webp" srcset="images/mobile/image-deep-earth.webp"/>
+                <img src="images/mobile/image-deep-earth.jpg" alt="Earth from space" class="[ responsive-img ]"/>
               </picture>
             </a>
           </li>
@@ -98,8 +105,10 @@
             <a href="#">
               <span>Night arcade</span>
               <picture>
-                <source media="(min-width: 575px)" srcset="images/desktop/image-night-arcade.jpg"/>
-                <img src="images/mobile/image-night-arcade.jpg" alt="Photo of skee ball arcade game at nighttime"/>
+                <source type="image/webp" media="(min-width: 575px)" srcset="images/desktop/image-night-arcade.webp"/>
+                <source type="image/jpeg" media="(min-width: 575px)" srcset="images/desktop/image-night-arcade.jpg"/>
+                <source type="image/webp" srcset="images/mobile/image-night-arcade.webp"/>
+                <img src="images/mobile/image-night-arcade.jpg" alt="Skee ball arcade game at nighttime" class="[ responsive-img ]"/>
               </picture>
             </a>
           </li>
@@ -107,8 +116,10 @@
             <a href="#">
               <span>Soccer team VR</span>
               <picture>
-                <source media="(min-width: 575px)" srcset="images/desktop/image-soccer-team.jpg"/>
-                <img src="images/mobile/image-soccer-team.jpg" alt="Photo of man playing soccer"/>
+                <source type="image/webp" media="(min-width: 575px)" srcset="images/desktop/image-soccer-team.webp"/>
+                <source type="image/jpeg" media="(min-width: 575px)" srcset="images/desktop/image-soccer-team.jpg"/>
+                <source type="image/webp" srcset="images/mobile/image-soccer-team.webp"/>
+                <img src="images/mobile/image-soccer-team.jpg" alt="Man playing soccer" class="[ responsive-img ]"/>
               </picture>
             </a>
           </li>
@@ -116,8 +127,10 @@
             <a href="#">
               <span>The grid</span>
               <picture>
-                <source media="(min-width: 575px)" srcset="images/desktop/image-grid.jpg"/>
-                <img src="images/mobile/image-grid.jpg" alt="Photo of side of race car"/>
+                <source type="image/webp" media="(min-width: 575px)" srcset="images/desktop/image-grid.webp"/>
+                <source type="image/jpeg" media="(min-width: 575px)" srcset="images/desktop/image-grid.jpg"/>
+                <source type="image/webp" srcset="images/mobile/image-grid.webp"/>
+                <img src="images/mobile/image-grid.jpg" alt="Side of race car" class="[ responsive-img ]"/>
               </picture>
             </a>
           </li>
@@ -125,8 +138,10 @@
             <a href="#">
               <span>From up above VR</span>
               <picture>
-                <source media="(min-width: 575px)" srcset="images/desktop/image-from-above.jpg"/>
-                <img src="images/mobile/image-from-above.jpg" alt="Photo looking down on very windy road from high above"/>
+                <source type="image/webp" media="(min-width: 575px)" srcset="images/desktop/image-from-above.webp"/>
+                <source type="image/jpeg" media="(min-width: 575px)" srcset="images/desktop/image-from-above.jpg"/>
+                <source type="image/webp" srcset="images/mobile/image-from-above.webp"/>
+                <img src="images/mobile/image-from-above.jpg" alt="Looking down on very windy road from high above" class="[ responsive-img ]"/>
               </picture>
             </a>
           </li>
@@ -134,8 +149,10 @@
             <a href="#">
               <span>Pocket borealis</span>
               <picture>
-                <source media="(min-width: 575px)" srcset="images/desktop/image-pocket-borealis.jpg"/>
-                <img src="images/mobile/image-pocket-borealis.jpg" alt="Photo of beautiful colors in the night sky"/>
+                <source type="image/webp" media="(min-width: 575px)" srcset="images/desktop/image-pocket-borealis.webp"/>
+                <source type="image/jpeg" media="(min-width: 575px)" srcset="images/desktop/image-pocket-borealis.jpg"/>
+                <source type="image/webp" srcset="images/mobile/image-pocket-borealis.webp"/>
+                <img src="images/mobile/image-pocket-borealis.jpg" alt="Beautiful colors in the night sky" class="[ responsive-img ]"/>
               </picture>
             </a>
           </li>
@@ -143,8 +160,10 @@
             <a href="#">
               <span>The curiosity</span>
               <picture>
-                <source media="(min-width: 575px)" srcset="images/desktop/image-curiosity.jpg"/>
-                <img src="images/mobile/image-curiosity.jpg" alt="Photo of Mars rover robot"/>
+                <source type="image/webp" media="(min-width: 575px)" srcset="images/desktop/image-curiosity.webp"/>
+                <source type="image/jpeg" media="(min-width: 575px)" srcset="images/desktop/image-curiosity.jpg"/>
+                <source type="image/webp" srcset="images/mobile/image-curiosity.webp"/>
+                <img src="images/mobile/image-curiosity.jpg" alt="Mars rover robot" class="[ responsive-img ]"/>
               </picture>
             </a>
           </li>
@@ -152,8 +171,10 @@
             <a href="#">
               <span>Make it fisheye</span>
               <picture>
-                <source media="(min-width: 575px)" srcset="images/desktop/image-fisheye.jpg"/>
-                <img src="images/mobile/image-fisheye.jpg" alt="Photo of circular landscape through a fisheye lens"/>
+                <source type="image/webp" media="(min-width: 575px)" srcset="images/desktop/image-fisheye.webp"/>
+                <source type="image/jpeg" media="(min-width: 575px)" srcset="images/desktop/image-fisheye.jpg"/>
+                <source type="image/webp" srcset="images/mobile/image-fisheye.webp"/>
+                <img src="images/mobile/image-fisheye.jpg" alt="Circular landscape through a fisheye lens" class="[ responsive-img ]"/>
               </picture>
             </a>
           </li>
