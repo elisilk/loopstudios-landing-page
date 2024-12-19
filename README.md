@@ -55,9 +55,9 @@ So many cool 😎 things:
 
 - Lighthouse and PageSpeed Insights
 
-  - [Thanks to @NikitaVologdin for the feedback and links to resources](https://www.frontendmentor.io/solutions/responsive-landing-page-using-sass-8inSDo6cyY), I spent some time improving the solution by working toward a [perfect Lighthouse score](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring) on each of the 4 metrics. I didn't get to perfection, but definitely improved.
+  - [Thanks to @NikitaVologdin for the feedback and links to resources](https://www.frontendmentor.io/solutions/responsive-landing-page-using-sass-8inSDo6cyY), I spent some time improving the solution by working toward a [perfect Lighthouse score](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring) on each of the 4 metrics.
   - Comparing solutions
-    - Current solution - [PageSpeed Insights Report from Dec 19, 2024, 9:49:13 AM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-loopstudios-landing-page/ttu0nq67mh)
+    - Current solution - [PageSpeed Insights Report from Dec 19, 2024, 10:13:22 AM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-loopstudios-landing-page/qhfs3q44pw)
     - Previous solution - [PageSpeed Insights Report from Dec 16, 2024, 10:47:26 AM](https://pagespeed.web.dev/analysis/https-elisilk-github-io-loopstudios-landing-page/59zwyw454b)
   - The main areas I improved included serving images in modern formats and eliminating render-blocking resources. I list resources for each below.
   - [Serve images in modern formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)
