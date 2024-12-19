@@ -4,17 +4,25 @@
 @font-face {
   font-family: "Alata";
   src: local("Alata Regular"), local("Alata-Regular"), url("../fonts/Alata-Regular.woff2") format("woff2"), url("../fonts/Alata-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Josefin Sans";
-  src: local("Josefin Sans Thin"), local("JosefinSans-Thin"), url("../fonts/JosefinSans-Thin.woff2") format("woff2"), url("../fonts/JosefinSans-Thin.woff") format("woff");
+  src: local("Josefin Sans Light"), local("JosefinSans-Light"), url("../fonts/JosefinSans-Light.woff2") format("woff2"), url("../fonts/JosefinSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
   font-display: swap;
 }
 /* ----- VARIABLES ----- */
 /* ----- BREAKPOINTS ----- */
 /* 650px -> mobile menu + flex column to row */
 /* 800px -> larger creations images */
+/* Fluid typography and spacing */
+/* https://royalfig.github.io/fluid-typography-calculator/ */
+/* Min Viewport = 25rem / 400px */
+/* Max Viewport = 50rem / 800px */
 /* ----- CUSTOM PROPERTIES ----- */
 :root {
   /* Colors */
@@ -344,28 +352,30 @@ h2 {
 
 /* ----- END ----- */
 /* ----- BLOCKS ----- */
-.body {
-  --flow-space: 6rem; /* 96px */
-}
-
 .header {
   /* position: relative; */
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), no-repeat url("../images/mobile/image-hero.jpg") top/cover;
   padding-block: clamp(2.5rem, 1rem + 6vw, 4rem); /* (m) 40px -> (d) 64px */
   height: 650px;
+  grid-template-rows: auto 1fr;
   align-items: start;
 }
-@supports (background-image: url("../images/mobile/image-hero.jpg")) {
+@supports (background-image: url("../images/mobile/image-hero.webp")) {
   .header {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), no-repeat url("../images/mobile/image-hero.webp") top/cover;
   }
+}
+
+.header > :last-child {
+  margin-block-start: 8.125rem;
+  margin-block-start: clamp(8.125rem, 12.25rem - 8.25vw, 10.1875rem); /* (m) 163px -> (d) 130px */
 }
 
 @media screen and (width > 550px) {
   .header {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), no-repeat url("../images/desktop/image-hero.jpg") top/cover;
   }
-  @supports (background-image: url("../images/desktop/image-hero.jpg")) {
+  @supports (background-image: url("../images/desktop/image-hero.webp")) {
     .header {
       background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), no-repeat url("../images/desktop/image-hero.webp") top/cover;
     }
@@ -476,6 +486,7 @@ h2 {
   }
   .footer-nav ul {
     --gap: 1rem;
+    align-items: center;
   }
 }
 .tagline {
@@ -502,6 +513,16 @@ h2 {
     margin-block-end: -16px; /* (m) -8px -> (d) -16px */
   }
 }
+.main {
+  margin-block-start: 6rem;
+  margin-block-start: clamp(6rem, 2rem + 16vw, 10rem); /* (m) 96px -> (d) 160px */
+  margin-block-end: 6rem;
+  margin-block-end: clamp(6rem, 0.5rem + 22vw, 11.5rem); /* (m) 96px -> (d) 184px */
+  display: grid;
+  gap: 6rem;
+  gap: clamp(6rem, 0.5rem + 22vw, 11.5rem); /* (m) 96px -> (d) 184px */
+}
+
 .section-leader {
   display: grid;
   gap: 3rem; /* 48px */
@@ -617,23 +638,28 @@ h2 {
 }
 .footer > .wrapper {
   --gap: 1rem; /* 16px */
-  --padding-block: 3.5rem; /* 56px */
+  --padding-block: 2.75rem;
+  --padding-block: clamp(
+    2.75rem,
+    4.25rem + -3vw,
+    3.5rem
+  ); /* (m) 56px -> (d) 44px */
 }
-.footer > .wrapper > [role=navigation] {
-  text-align: center;
-  padding-block: 1rem;
+
+.footer-nav {
+  padding-block: 1rem 2rem;
 }
 
 @media screen and (width > 750px) {
   .footer > .wrapper {
+    --gap: 1.5rem; /* 16px */
     /* select the last two elements */
-  }
-  .footer > .wrapper > [role=navigation] {
-    text-align: unset;
-    padding-block: 0;
   }
   .footer > .wrapper > :nth-last-child(-n+2) {
     justify-self: end;
+  }
+  .footer-nav {
+    padding-block: 0;
   }
 }
 /* ----- END ----- */

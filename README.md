@@ -81,6 +81,7 @@ So many cool 😎 things:
 
     - "Background and foreground colors do not have a sufficient contrast ratio" (under Accessibility) - This was a fairly easy change to darken the text color a little bit, even though it kind of goes against what is called for in the design.
     - "Serves images with low resolution" (under Best Practices for the desktop version of the site) - This error seemed to be focused on the "image-interactive" in the leader section and seemed to be asking for an image option with 2x pixel density. I didn't have access to the original full-quality image and so I didn't have a way to get a true higher density version of the image. But to [practice resolution switching for display density](https://cloudfour.com/thinks/responsive-images-101-part-3-srcset-display-density/), I just created a larger version of the image (1048px x 717px) and used [`srcet`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source#srcset) to give the browser the option of which image to use. And that worked!
+      - [How to fix Lighthouse “Serves images with low resolution”](https://stackoverflow.com/questions/68234771/how-to-fix-lighthouse-serves-images-with-low-resolution)
 
   - Areas that I am still exploring, but was not successful at improving YET include:
     - ["Enable text compression"](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression)
@@ -92,7 +93,10 @@ So many cool 😎 things:
       - [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp)
       - [Optimize resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority)
       - [Don't fight the browser preload scanner](https://web.dev/articles/preload-scanner)
+      - [Optimizing The Image Element LCP](https://www.smashingmagazine.com/2023/01/optimizing-image-element-lcp/)
     - ["Page prevented back/forward cache restoration"](https://developer.chrome.com/docs/lighthouse/performance/bf-cache)
+    - ["Image elements do not have explicit width and height"](https://web.dev/articles/optimize-cls)
+      - [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/#art-direction)
 
 - [Sass](https://sass-lang.com/) - This was my first time really using Sass, a CSS preprocessor as part of Frontend Mentor's [Advanced CSS techniques](https://www.frontendmentor.io/learning-paths/advanced-css-techniques-vdOtKjIC4V). I feel like I just barely scratched the surface of this, but it was good to get the setup working and starting to get the feel of it. I used partials and a few variables. I will want to do more with nesting, mixins, and functions as a continue to make use of Sass and learn all it has to offer.
   - [Sass Crash Course](https://youtu.be/nu5mdN2JIwM?si=GWKL5R2W1x_aYY2I)
@@ -149,6 +153,11 @@ So many cool 😎 things:
 
 Specific areas that the solution should be improved (known issues):
 
+- The vertical spacing between sections (and within sections) is not pixel perfect relative to the design, so it would be worth revisiting that.
+- The font weights seem off comparing the solution to the design, especially for the headings. It's important that the headings really pop, and so it would be worth revisiting that.
+- There are a number of errors and info warnings in the [Frontend Mentor HTML report](https://www.frontendmentor.io/solutions/responsive-landing-page-using-sass-8inSDo6cyY) that are worth looking over and addressing.
+  - The info warning about `role="list"` being unnecessary would be easy to fix, although I'm not sure I want to given the [accessibility concerns that are raised when setting `list-style: none`](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility)
+  - The error about the attribute `width` not being allowed on the `source` element also seems problematic to me, [given that it is allowed if the parent is a `picture`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source#width), which is the case for my solution. And I want to keep the width and height explicitly specified to maintain the images responsiveness, reduce layout shifts, and [still implement art direction](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/#art-direction) for that image.
 - Turn the header into some sort of sticky header that stays around as the user scrolls down the page (at least in the mobile view). Seems a little tricky because the header includes both the top part (the logo and primary nav), which is what I want to be sticky, and the hero content, which should not be sticky. But both parts share the same background image. Might also want the top part to transition from the background image to an all black background as the user scrolls up and the background image is scrolled out the viewport. So how do all that? Will have to think about it a bit more and come back to it.
   - [`position: sticky`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky)
   - [Sticky Headers And Full-Height Elements: A Tricky Combination](https://www.smashingmagazine.com/2024/09/sticky-headers-full-height-elements-tricky-combination/)

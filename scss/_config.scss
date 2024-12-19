@@ -9,14 +9,18 @@
   src: local("Alata Regular"), local("Alata-Regular"),
     url("../fonts/Alata-Regular.woff2") format("woff2"),
     url("../fonts/Alata-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Josefin Sans";
-  src: local("Josefin Sans Thin"), local("JosefinSans-Thin"),
-    url("../fonts/JosefinSans-Thin.woff2") format("woff2"),
-    url("../fonts/JosefinSans-Thin.woff") format("woff");
+  src: local("Josefin Sans Light"), local("JosefinSans-Light"),
+    url("../fonts/JosefinSans-Light.woff2") format("woff2"),
+    url("../fonts/JosefinSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -29,6 +33,11 @@ $font-family-headings: "Josefin Sans", sans-serif;
 
 /* 650px -> mobile menu + flex column to row */
 /* 800px -> larger creations images */
+
+/* Fluid typography and spacing */
+/* https://royalfig.github.io/fluid-typography-calculator/ */
+/* Min Viewport = 25rem / 400px */
+/* Max Viewport = 50rem / 800px */
 
 /* ----- CUSTOM PROPERTIES ----- */
 

@@ -14,29 +14,33 @@ primaryNavToggle.addEventListener("click", () => {
 /* watches for changes in the currentSrc of the img element 
 https://cloudfour.com/thinks/responsive-images-101-part-2-img-required/ */
 
-const imgIdToWatch = "image-interactive";
-const imgClassToWatch = "responsive-img";
+const debug = false;
 
-/* imgEl = document.getElementById(imgIdToWatch); */
-const imgEl = document.getElementsByClassName(imgClassToWatch)[1];
+if (debug) {
+  const imgIdToWatch = "image-interactive";
+  const imgClassToWatch = "responsive-img";
 
-const imgsToWatch = document.getElementsByClassName(imgClassToWatch);
+  /* imgEl = document.getElementById(imgIdToWatch); */
+  const imgEl = document.getElementsByClassName(imgClassToWatch)[1];
 
-/* imgsToWatch.forEach((img) => {}); */
+  const imgsToWatch = document.getElementsByClassName(imgClassToWatch);
 
-(function () {
-  var currentSrc, oldSrc;
-  var showPicSrc = function () {
-    oldSrc = currentSrc;
-    currentSrc = imgEl.currentSrc || imgEl.src;
+  /* imgsToWatch.forEach((img) => {}); */
 
-    if (typeof oldSrc === "undefined" || oldSrc !== currentSrc) {
-      /* document.getElementById("logger").innerHTML = currentSrc; */
-      console.log(new URL(currentSrc).pathname);
-    }
-  };
+  (function () {
+    var currentSrc, oldSrc;
+    var showPicSrc = function () {
+      oldSrc = currentSrc;
+      currentSrc = imgEl.currentSrc || imgEl.src;
 
-  // You may wish to debounce resize if you have performance concerns
-  window.addEventListener("resize", showPicSrc);
-  window.addEventListener("load", showPicSrc);
-})(window);
+      if (typeof oldSrc === "undefined" || oldSrc !== currentSrc) {
+        /* document.getElementById("logger").innerHTML = currentSrc; */
+        console.log(new URL(currentSrc).pathname);
+      }
+    };
+
+    // You may wish to debounce resize if you have performance concerns
+    window.addEventListener("resize", showPicSrc);
+    window.addEventListener("load", showPicSrc);
+  })(window);
+}
