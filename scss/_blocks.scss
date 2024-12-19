@@ -63,8 +63,9 @@
     height: 1.5rem; /* 24px only */
 
     & > img {
-      max-height: 100%;
       aspect-ratio: 6;
+      max-height: 100%;
+      width: auto;
     }
 
     &:focus-visible {
@@ -256,7 +257,8 @@
 
 .section-creations {
   display: grid;
-  gap: 3rem; /* 48px */
+  gap: 3rem;
+  gap: clamp(3rem, 1rem + 8vw, 5rem); /* (m) 48px -> (d) 80px */
   grid-template-areas:
     "heading"
     "cards"

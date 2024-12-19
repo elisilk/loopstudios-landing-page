@@ -38,6 +38,7 @@
 .flex-row {
   display: flex;
   gap: var(--gap, 1rem);
+  align-items: center;
 }
 
 .flex-column-to-row {
