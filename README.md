@@ -160,7 +160,7 @@ Specific areas that the solution should be improved (known issues):
   - [`position: sticky`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky)
   - [Sticky Headers And Full-Height Elements: A Tricky Combination](https://www.smashingmagazine.com/2024/09/sticky-headers-full-height-elements-tricky-combination/)
   - [Google "change header background color on scroll css"](https://www.google.com/search?q=change+header+background+color+on+scroll+css)
-- [<figcaption>: The Figure Caption element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption) - Consider using this for the card images.
+- [`<figcaption>`: The Figure Caption element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption) - Consider using this for the card images.
 - Add some transition effects, especially for hovering over the links
 - Implement some more of Sass functionality, especially [extend/inheritance](https://sass-lang.com/guide/#inheritance).
 
